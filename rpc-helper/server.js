@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const clientId = 'YOUR_APP_ID'; // Your APP ID found on the discord dev portal
+const clientId = 'YOUR_CLIENT_ID'; // Your APP ID found on the discord dev portal
 const rpc = new RPC.Client({ transport: 'ipc' });
 
 rpc.on('ready', () => console.log('Discord RPC connected!'));
@@ -20,7 +20,7 @@ app.post('/update', (req, res) => {
     const activity = {
         details: title || "Reading Manga", 
         instance: false,
-        largeImageKey: "YOUR_RPC_IMAGE", // add the image to your RPC assets
+        largeImageKey: "your_image_key", // add the image to your RPC assets
         largeImageText: title || "Manga"
     };
 
