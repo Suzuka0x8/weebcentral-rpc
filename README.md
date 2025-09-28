@@ -109,7 +109,7 @@ This project allows your Discord profile to show what page or content you are cu
 
 ## Preview
 
-![Preview](https://imgur.com/SgsvnLq)
+![Preview](https://imgur.com/SgsvnLq.png)
 
 ## License
 
