@@ -67,26 +67,35 @@ This project allows your Discord profile to show what page or content you are cu
 
 ## 3. Firefox Extension Setup
 
-1. **Install Firefox Developer Edition** (recommended) or use normal Firefox.  
-   - Developer Edition allows permanent unsigned extensions.
+1. **Install Firefox Developer Edition** (recommended).  
+   - The extension **cannot be loaded on standard Firefox** due to unsigned extension restrictions.  
 
-2. **Open Add-on Debugging:**  
-   - Navigate to `about:debugging#/runtime/this-firefox`.
+2. **Disable signature enforcement for XPI:**  
+   - Open `about:config` in Firefox Developer Edition.  
+   - Search for `xpinstall.signatures.required` and set it to **false**.
 
-3. **Load the extension:**  
-   - Click **"Load Temporary Add-on"**.  
-   - Select `manifest.json` in the `extension` folder.
+3. **Load the extension:**
+   - **Temporary (for testing / development on normal Firefox):**
+     1. Open Firefox.  
+     2. Go to **Extensions** → click the **gear icon** → **Debug Add-ons**.  
+     3. Click **Load Temporary Add-on** and select the `manifest.json` in your extension folder.  
+   - **Permanent (Developer Edition via XPI):**
+     1. Open `about:addons`.  
+     2. Click **Install Add-on From File...**  
+     3. Select the `.xpi` file created from your extension folder.  
 
 4. **Verify it’s loaded:**  
-   - The extension will appear under “Temporary Extensions.”  
-   - It stays active while Firefox is open.
+   - The extension should appear under your installed add-ons.  
+   - It will stay active while Firefox is open.
 
 5. **Open the target website:**  
-   - Go to the website you want to track (e.g., WeebCentral.com).  
-   - The extension will read the page metadata and send it to the Node.js RPC helper.
+   - Go to the supported site (e.g., WeebCentral).  
+   - The extension reads page metadata and sends it to the Node.js RPC helper.
 
-> **Note:** Temporary extensions are active only while Firefox is running.  
-> Using Firefox Developer Edition allows permanent loading of unsigned extensions.
+> **Notes:**  
+> - Temporary extensions are removed when Firefox closes.  
+> - Using the `.xpi` in Developer Edition with signature enforcement disabled allows permanent installation.  
+> - To **create or modify your own XPI file**, see Mozilla’s guide: [Packaging a Firefox Extension](https://extensionworkshop.com/documentation/publish/package-your-extension/)
 
 ---
 
