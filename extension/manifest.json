@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "WeebCentral Discord RPC",
+  "version": "1.0",
+  "description": "Updates Discord Rich Presence with manga title, chapter, and cover from WeebCentral",
+  "permissions": ["tabs",
+   "http://localhost:3000/",
+    "*://weebcentral.com/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.weebcentral.com/*",
+        "*://www.weebcentral.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "manga-rpc@example.com"
+  }
+}
+
+}
