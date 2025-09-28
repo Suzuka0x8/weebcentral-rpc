@@ -1,4 +1,4 @@
-# Custom-RPC
+# Discord-RPC
 
 Discord Rich Presence helper for WeebCentral (or customizable for other websites).
 
@@ -109,7 +109,7 @@ This project allows your Discord profile to show what page or content you are cu
 
 ## Preview
 
-![Custom-RPC Preview](https://imgur.com/SgsvnLq)
+![Preview](https://imgur.com/SgsvnLq)
 
 ## License
 
