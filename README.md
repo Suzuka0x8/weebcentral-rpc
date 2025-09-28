@@ -111,6 +111,8 @@ This project allows your Discord profile to show what page or content you are cu
 
 ![Preview](https://imgur.com/SgsvnLq.png)
 
+---
+
 ## License
 
 [MIT](LICENSE)
