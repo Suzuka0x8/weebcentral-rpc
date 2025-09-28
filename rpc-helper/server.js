@@ -20,7 +20,7 @@ app.post('/update', (req, res) => {
     const activity = {
         details: title || "Reading Manga", 
         instance: false,
-        largeImageKey: "default", // add the image to your RPC assets, name it default on the discord dev portal
+        largeImageKey: "YOUR_RPC_IMAGE", // add the image to your RPC assets
         largeImageText: title || "Manga"
     };
 
