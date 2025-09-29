@@ -20,7 +20,10 @@ This project allows your Discord profile to show what page or content you are cu
 
 Get the latest release here: [Releases](https://github.com/Suzuka0x8/weebcentral-rpc/releases)
 
-- **Firefox Extension (.xpi)** – Load in Firefox Developer Edition  
+- **Firefox Extension (.xpi)** – Load in Firefox Developer Edition
+> **Important:** Right-click the `.xpi` link and choose **Save Link As...**  
+> Do **not** left-click — Firefox will try to install it directly and fail.
+
 - **Source Code (.zip)** – Clone or extract for Node.js RPC helper
 
 ---
